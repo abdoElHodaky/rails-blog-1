@@ -1,4 +1,4 @@
-FROM ruby:3-alpine
+FROM ruby:2.7.5-alpine
 WORKDIR /app
 COPY . .
 RUN apk add --no-cache build-base tzdata nodejs npm yarn sqlite-dev postgresql-dev mysql-dev
