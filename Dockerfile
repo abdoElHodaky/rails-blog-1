@@ -6,7 +6,7 @@ RUN gem install bundler
 RUN bundle install
 RUN bundle update --all
 ENV RAILS_ENV=development
-ENV SECRET_KEY_BASE=40ffa74d9a25fe77a64a11328a24f6e28510132cd9a1605efe5d54f27eacce3c529679ace0bfedac36caf38d4f403a4a831b3b548bc2b3b7cc6a92026ee4c551
+ENV SECRET_KEY_BASE=16f8953ec6c4c1190dd3f498a8b8df6c148e6f21301a52c3e02ea20784a47f86b3d2e451b5446ad7337196ae2a7d37656bc144e6a1442bfb510c5d3d1d00977f
 RUN rake db:load_config && rake db:migrate
 RUN rake db:seed
 RUN bundle exec rails assets:precompile
