@@ -2,7 +2,7 @@ FROM ruby:2-alpine3.15
 WORKDIR /app
 COPY . .
 RUN apk add --no-cache build-base tzdata nodejs npm yarn sqlite-dev postgresql-dev mysql-dev python2 python3 clang
-RUN yarn upgrade && yarn add global node-gyp
+RUN rm package-lock.json && yarn upgrade && yarn add global node-gyp
 RUN gem install bundler
 RUN bundle update --all
 ENV RAILS_ENV=development
