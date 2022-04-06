@@ -10,5 +10,6 @@ ENV SECRET_KEY_BASE=16f8953ec6c4c1190dd3f498a8b8df6c148e6f21301a52c3e02ea20784a4
 RUN rake db:create && rake db:migrate
 RUN rake db:seed
 RUN bundle exec rails assets:precompile
+ENV RAILS_SERVE_STATIC_FILES=true
 EXPOSE 3000
 CMD ["rails", "s"]
